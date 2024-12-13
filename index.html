@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンボクリエイターver.1.1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div>
+	<button data-image="C:/Users/ryuic/Desktop/commando/7.png">↖</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/8.png">↑</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/9.png">↗</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/zp.png">弱P</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/tp.png">中P</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/kp.png">強P</button>
+<br>
+	<button data-image="C:/Users/ryuic/Desktop/commando/4.png">←</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/N.png">N</button>	
+	<button data-image="C:/Users/ryuic/Desktop/commando/6.png">→</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/np.png">P</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/nk.png">K</button>
 
+<br>
+	<button data-image="C:/Users/ryuic/Desktop/commando/1.png">↙</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/2.png">↓</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/3.png">↘</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/zk.png">弱K</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/tk.png">中K</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/kk.png">強K</button>
+<br>
+
+<br>
+	<button data-image="C:/Users/ryuic/Desktop/commando/z.png">弱</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/t.png">中</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/k.png">強</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/auto.png">AUTO</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/N.png">ニュートラル</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/SP.png">SP</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/DI.png">ドライブインパクト</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/DP.png">ドライブパリィ</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/hold.png">ホールド</button>
+<br>
+<br>
+        <button data-image="C:/Users/ryuic/Desktop/commando/next.png">次のコマンド</button>
+	<button data-image="C:/Users/ryuic/Desktop/commando/plus.png">プラス</button>
+        <br />
+        <button id="newLineBtn" class="button">改行</button>
+        <button id="addTextBoxBtn" class="button">テキストボックス追加</button>
+        <button id="removeLastBtn" class="button">1つ削除</button>
+    </div>
+    <div class="image-container"></div>
+
+    <script>
+    const imageContainer = document.querySelector('.image-container');
+    const buttons = document.querySelectorAll('button[data-image]');
+    const newLineBtn = document.getElementById('newLineBtn');
+    const addTextBoxBtn = document.getElementById('addTextBoxBtn');
+    const removeLastBtn = document.getElementById('removeLastBtn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const imageSrc = button.getAttribute('data-image');
+            addImage(imageSrc);
+        });
+    });
+
+    newLineBtn.addEventListener('click', () => {
+        const br = document.createElement('br');
+        imageContainer.appendChild(br);
+    });
+
+    addTextBoxBtn.addEventListener('click', () => {
+        addTextBox();
+    });
+
+    removeLastBtn.addEventListener('click', () => {
+        removeLastElement();
+    });
+
+    function addImage(imageSrc) {
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        img.alt = '選択された画像';
+        imageContainer.appendChild(img);
+    }
+
+    function addTextBox() {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = 'テキストを入力';
+        imageContainer.appendChild(input);
+    }
+
+    function removeLastElement() {
+        const lastElement = imageContainer.lastElementChild;
+        if (lastElement) {
+            imageContainer.removeChild(lastElement);
+        }
+    }
+    </script>
+</body>
+</html>
