@@ -1,7 +1,7 @@
 .button {
     width: 1000px;
-    padding: 1000px;
-    margin: 500px;
+    padding: 100px;
+    margin: 100px;
     box-sizing: border-box;
     cursor: pointer;
 }
