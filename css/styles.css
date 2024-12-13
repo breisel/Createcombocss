@@ -6,9 +6,9 @@
     cursor: pointer;
 }
 .image-container img {
-    width: 1000px;
-    height: 1000px;
-    margin: 500px;
+    width: 100px;
+    height: 100px;
+    margin: 0px;
 }
 .image-container input[type="text"] {
     margin: 1000px;
