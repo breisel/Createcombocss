@@ -21,3 +21,12 @@ button[data-image]  {
     box-sizing: border-box;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .button {
+        width: 100%;  /* スマートフォンではボタンを全幅に */
+        padding: 10px; /* パディングを調整 */
+    }
+    .image-container img {
+        width: 80%; /* 画像の幅を調整 */
+    }
+}
