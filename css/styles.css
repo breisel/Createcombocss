@@ -6,11 +6,11 @@
     cursor: pointer;
 }
 .image-container img {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
+    width: 1000px;
+    height: 1000px;
+    margin: 500px;
 }
 .image-container input[type="text"] {
-    margin: 100px;
-    padding: 100px;
+    margin: 1000px;
+    padding: 1000px;
 }
