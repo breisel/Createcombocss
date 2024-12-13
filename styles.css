@@ -1,0 +1,17 @@
+@charset "utf-8";
+.button {
+    width: 120px;
+    padding: 100px;
+    margin: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.image-container img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+.image-container input[type="text"] {
+    margin: 5px;
+    padding: 5px;
+}
